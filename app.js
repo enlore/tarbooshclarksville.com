@@ -5,16 +5,18 @@ var express = require('express')
     , path = require('path')
 
 app.set('view engine', 'jade')
-app.set('view options', {
-    pretty: true
-})
 app.set('views', __dirname + '/views')
+
+app.configure('development', function () {
+    app.locals.pretty = true
+})
 
 app.use(less({
     src: path.join(__dirname, 'static'),
     compress: false,
     debug: true
 }))
+
 app.use(express.static(path.join(__dirname, 'static')))
 
 app.get('/', function (req, res) {
