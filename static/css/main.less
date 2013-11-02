@@ -1,5 +1,15 @@
-@grid-width: 62em;
-.wrapper {
-    max-width: @grid-width;
+@slider-width: 800px;
+@slider-height: 400px;
+.sl-slider-wrapper {
+    width: @slider-width;
+    height: @slider-height;
     margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.sl-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
