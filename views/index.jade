@@ -2,6 +2,49 @@ extends base
 block body
     #slider.sl-slider-wrapper
         .sl-slider
+
             .sl-slide.bg-1
                 .sl-slide-inner
                     .deco(data-icon="H")
+                        h2 A thing
+                        blockquote
+                            p Hoodly doodly poop
+                            cite Jesus
+            // /.sl-slide.bg-1
+
+            .sl-slide.bg-2
+                .sl-slide-inner
+                    .deco(data-icon="q")
+                        h2 Another thing
+                        blockquote
+                            p
+                                | You know I just thought I'd act like one o them
+                                | Def Mutes
+                            cite Sling Blade?
+            // /.sl-slide.bg-2
+
+            .sl-slide.bg-3
+                .sl-slide-inner
+                    .deco(data-icon="q")
+                        h2 Final Thing
+                        blockquote
+                            p
+                                | I am the very model of a modern major general
+                            cite A Modern Major General
+            // /.sl-slide-bg-3
+
+        // /.sl-slider
+
+        nav#nav-arrows.nav-arrows
+            span.nav-arrow-prev Previous
+            span.nav-arrow-next Next
+        // /.nav-arrows
+
+        nav#nav-dots.nav-dots
+            span.nav-dot-current
+            span
+            span
+        // /.nav-dots
+
+    // /.sl-slider-wrapper
+
