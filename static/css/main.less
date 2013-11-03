@@ -5,9 +5,11 @@
 
 @rich-red: #84151A;
 @rich-lighter-red: #A0181C;
+@shadow-red: #660E0F;
 
-@panel-bg-start: @rich-red;
-@panel-bg-stop: @rich-lighter-red;
+@red-damn-box-bg-start: @rich-red;
+@red-damn-box-bg-stop: @rich-lighter-red;
+@red-damn-box-shadow: @shadow-red;
 
 body,
 h1,h2,h3,h4,h5,h6{
@@ -81,13 +83,14 @@ body > a img {
     padding: 0.8em;
 }
 
-
 .red-damn-box {
     height: 70%;
     border-radius: 4px;
-    #gradient > .vertical(@panel-bg-start; @panel-bg-stop;);
+    #gradient > .vertical(@red-damn-box-bg-start; @red-damn-box-bg-stop;);
     overflow-y: scroll;
     overflow-x: hidden;
+    box-shadow: inset 0 -4px 3px -1px @red-damn-box-shadow,
+                inset 0 4px 3px -1px @red-damn-box-shadow;
 }
 
 .hookah-flavors {
