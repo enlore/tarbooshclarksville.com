@@ -1,7 +1,9 @@
 extends base
 block body
   a(href="/")
-    img(class="img-resp centered", src="/img/tarboosh-logo.png")
+    img(class="img-resp centered",
+      src="/img/tarboosh-logo.png",
+      alt="Tarboosh Clarksville Logo")
 
   .wrapper
     #slider.sl-slider-wrapper
@@ -10,48 +12,48 @@ block body
         .sl-slide.bg-1(data-orientation="horizontal")
           .sl-slide-inner
             .red-damn-box.abs-centered
-              .container
+              .container.food-grid
                 .row
-                  .food-grid.col-md-4
+                  .food-button.col-md-4
                     a(href="#appetizers-modal")
                       img(class="img-responsive centered", src="/img/appetizers-btn.png")
-                  .food-grid.col-md-4
+                  .food-button.col-md-4
                     a(href="#appetizers-modal")
                       img(class="img-responsive centered", src="/img/burgers-btn.png")
-                  .food-grid.col-md-4
+                  .food-button.col-md-4
                     a(href="#appetizers-modal")
                       img(class="img-responsive centered", src="/img/calzones-btn.png")
 
                 .row
-                  .food-grid.col-md-4
+                  .food-button.col-md-4
                     a(href="#platters-modal")
                       img(class="img-responsive centered", src="/img/platters-btn.png")
-                  .food-grid.col-md-4
+                  .food-button.col-md-4
                     a(href="#pizza-modal")
                       img(class="img-responsive centered", src="/img/pizza-btn.png")
-                  .food-grid.col-md-4
+                  .food-button.col-md-4
                     a(href="#pockets-modal")
                       img(class="img-responsive centered", src="/img/pockets-btn.png")
 
                 .row
-                  .food-grid.col-md-4
+                  .food-button.col-md-4
                     a(href="#soups-salads-modal")
                       img(class="img-responsive centered", src="/img/soups-salads-btn.png")
-                  .food-grid.col-md-4
+                  .food-button.col-md-4
                     a(href="#specialties-modal")
                       img(class="img-responsive centered", src="/img/specialties-btn.png")
-                  .food-grid.col-md-4
+                  .food-button.col-md-4
                     a(href="#wings-modal")
                       img(class="img-responsive centered", src="/img/wings-btn.png")
 
                 .row
-                  .food-grid.col-md-4
+                  .food-button.col-md-4
                     a(href="#subs-modal")
                       img(class="img-responsive centered", src="/img/subs-btn.png")
-                  .food-grid.col-md-4
+                  .food-button.col-md-4
                     a(href="#desserts-modal")
                       img(class="img-responsive centered", src="/img/desserts-btn.png")
-                  .food-grid.col-md-4
+                  .food-button.col-md-4
                     a(href="#drinks-modal")
                       img(class="img-responsive centered", src="/img/drinks-btn.png")
               // /.sl-slide.bg-1
@@ -59,27 +61,77 @@ block body
         .sl-slide.bg-2(data-orientation="horizontal")
           .sl-slide-inner
             .red-damn-box.abs-centered
-              .container
+              .container.hookah-flavors.aligned-center
                 .row
                   .col-md-6
                     .row
                       .col-md-12
+                        h2 Regular Flavors - $9.99
 
                     .row
                       .col-md-6
+                        p Apple
+                        p Banana
+                        p Cherry
+                        p Grenadine
+                        p Grape
+                        p Jasmine
+                        p Lemon
+                        p Mint
+                        p Mango
+                        p Orange
+                        p Mixed Fruit
+                        p Watermelon
+                        p Peach Rose
+                        p Strawberry
+                        p Vanilla
 
                       .col-md-6
+                        p Coconut
+                        p Plum
+                        p Monster
+                        p Cola
+                        p Pineapple
+                        p Gum
+                        p Kiwi
+                        p Cappuccino
+                        p Café Latté
+                        p Berry
+                        p Licorice
+                        p Chocolate
+                        p Cinnamon
+                        p Melon
 
-                .row
                   .col-md-6
                     .row
                       .col-md-12
+                        h2 Starbuzz - $13.99
 
                     .row
                       .col-md-6
+                        p Exotic Pink
+                        p Code 69
+                        p Pink Lady
+                        p Blue Mist
+                        p Sex on the Beach
+                        p WinterFresh
+                        p Queen of Sex
+                        p Lebanese Bombshell
+                        p Margarita
+                        p Flower Power
 
                       .col-md-6
-
+                        p Passion Kiss
+                        p Pirate’s Cave
+                        p Pumpkin Pie
+                        p Chocolate-Strawberry
+                        p Melon Dew
+                        p Nice Dreams
+                        p Pomegranate
+                        p Raspberry Kamikaze
+                        p Black Mamba
+                        p Triple “X”
+                        p U.F.O.
               // /.sl-slide.bg-2
 
         .sl-slide.bg-3(data-orientation="horizontal")
@@ -97,11 +149,6 @@ block body
               // /.sl-slide-bg-3
 
           // /.sl-slider
-
-      nav#nav-arrows.nav-arrows
-        span.nav-arrow-prev Previous
-        span.nav-arrow-next Next
-      // /.nav-arrows
 
       nav#nav-dots.nav-dots
         button.nav-dot-current.btn Food
