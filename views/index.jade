@@ -1,59 +1,85 @@
 extends base
 block body
-    a(href="/")
-        img(class="img-resp centered", src="/img/tarboosh-logo.png")
-    .wrapper
-        #slider.sl-slider-wrapper
-            .sl-slider
+  a(href="/")
+    img(class="img-resp centered", src="/img/tarboosh-logo.png")
 
-                .sl-slide.bg-1(data-orientation="horizontal")
-                    .sl-slide-inner
-                        .panel.abs-centered
-                            p WOO
-                            p WOO
-                            p WOO
-                            p WOO
-                            p WOO
-                            p WOO
-                            p WOO
-                            p WOO
-                            p WOO
-                            p WOO
-                            p WOO
-                            p WOO
-                            p WOO
-                            p WOO
-                            p WOO
-                            p WOO
-                            p WOO
-                            p WOO
-                            p WOO
-                            p WOO
-                            p WOO
-                // /.sl-slide.bg-1
+  .wrapper
+    #slider.sl-slider-wrapper
+      .sl-slider
 
-                .sl-slide.bg-2(data-orientation="horizontal")
-                    .sl-slide-inner
-                        .panel.abs-centered
-                // /.sl-slide.bg-2
+        .sl-slide.bg-1(data-orientation="horizontal")
+          .sl-slide-inner
+            .red-damn-box.abs-centered
+              .container
+                .row
+                  .food-grid.col-md-4
+                    a(href="#appetizers-modal")
+                      img(class="img-responsive centered", src="/img/appetizers-btn.png")
+                  .food-grid.col-md-4
+                    a(href="#appetizers-modal")
+                      img(class="img-responsive centered", src="/img/burgers-btn.png")
+                  .food-grid.col-md-4
+                    a(href="#appetizers-modal")
+                      img(class="img-responsive centered", src="/img/calzones-btn.png")
 
-                .sl-slide.bg-3(data-orientation="horizontal")
-                    .sl-slide-inner
-                        .panel.abs-centered
-                // /.sl-slide-bg-3
+                .row
+                  .food-grid.col-md-4
+                    a(href="#platters-modal")
+                      img(class="img-responsive centered", src="/img/platters-btn.png")
+                  .food-grid.col-md-4
+                    a(href="#pizza-modal")
+                      img(class="img-responsive centered", src="/img/pizza-btn.png")
+                  .food-grid.col-md-4
+                    a(href="#pockets-modal")
+                      img(class="img-responsive centered", src="/img/pockets-btn.png")
 
-            // /.sl-slider
+                .row
+                  .food-grid.col-md-4
+                    a(href="#soups-salads-modal")
+                      img(class="img-responsive centered", src="/img/soups-salads-btn.png")
+                  .food-grid.col-md-4
+                    a(href="#specialties-modal")
+                      img(class="img-responsive centered", src="/img/specialties-btn.png")
+                  .food-grid.col-md-4
+                    a(href="#wings-modal")
+                      img(class="img-responsive centered", src="/img/wings-btn.png")
 
-            nav#nav-arrows.nav-arrows
-                span.nav-arrow-prev Previous
-                span.nav-arrow-next Next
-            // /.nav-arrows
+                .row
+                  .food-grid.col-md-4
+                    a(href="#subs-modal")
+                      img(class="img-responsive centered", src="/img/subs-btn.png")
+                  .food-grid.col-md-4
+                    a(href="#desserts-modal")
+                      img(class="img-responsive centered", src="/img/desserts-btn.png")
+                  .food-grid.col-md-4
+                    a(href="#drinks-modal")
+                      img(class="img-responsive centered", src="/img/drinks-btn.png")
+              // /.sl-slide.bg-1
 
-            nav#nav-dots.nav-dots
-                button.nav-dot-current.btn Food
-                button.btn Hookah
-                button.btn Contact
-            // /.nav-dots
+        .sl-slide.bg-2(data-orientation="horizontal")
+          .sl-slide-inner
+            .red-damn-box.abs-centered
 
-        // /.sl-slider-wrapper
+              // /.sl-slide.bg-2
+
+        .sl-slide.bg-3(data-orientation="horizontal")
+          .sl-slide-inner
+            .red-damn-box.abs-centered
+
+              // /.sl-slide-bg-3
+
+          // /.sl-slider
+
+      nav#nav-arrows.nav-arrows
+        span.nav-arrow-prev Previous
+        span.nav-arrow-next Next
+      // /.nav-arrows
+
+      nav#nav-dots.nav-dots
+        button.nav-dot-current.btn Food
+        button.btn Hookah
+        button.btn Contact
+      // /.nav-dots
+
+      // /.sl-slider-wrapper
 
