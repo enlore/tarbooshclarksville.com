@@ -54,4 +54,27 @@
         onBeforeChange: function (slide, idx) { return false },
         onAfterChange: function (slide, idx) { return false }
     }
+
+    $.SlitSlider.prototype = {
+        _init: fuction () {},
+        _getSize: function () {},
+        _layout: function () {},
+        _navigate: function (dir, pos) {},
+        _validateValues: function (config) {},
+        _onEndNavigate: function ($slice, $oldSlide, dir) {},
+        _setSize: function () {},
+        _loadEvents: function () {},
+        _startSlideshow: function () {},
+        _stopSlideshow: function () {},
+        _destroy: function (callback) {},
+
+        add: function ($slides, callback) {},
+        next: function () {},
+        previous: function () {},
+        jump: function (pos) {},
+        play: function () {},
+        pause: function () {},
+        isActive: function () {},
+        destroy: function () {}
+    }
 })
