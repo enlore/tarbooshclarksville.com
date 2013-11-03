@@ -23,12 +23,13 @@ body > a {
     left: 0;
     width: 100%;
     min-height: auto;
+    z-index: 20000;
 }
 
 body > a img {
     position: relative;
     width: 200px;
-    z-index: 20000;
+    z-index: 20001;
 }
 
 @media screen and (min-width: 992px) {
@@ -44,6 +45,10 @@ body > a img {
 
 .centered {
     margin: 0 auto;
+}
+
+.aligned-center {
+    text-align: center;
 }
 
 .abs-centered {
@@ -74,13 +79,25 @@ body > a img {
     overflow-x: hidden;
 }
 
+address {
+    p {
+        font-size: 24px;
+        color: #fff;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .contact-info {
+        margin-top: 8%;
+    }
+}
+
 .btn {
     width: auto;
     font-size: 22px;
     color: #eee;
     border: 1px solid #D61100;
     border-radius: 2px;
-    //#gradient > .vertical(@start-color: #F74531; @end-color: #D13E2E;);
     .button-variant(#eee; #DF4231; #D61100;)
 }
 
