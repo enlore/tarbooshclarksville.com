@@ -15,46 +15,46 @@ block body
               .container.food-grid
                 .row
                   .food-button.col-md-4
-                    a(href="#appetizers-modal")
+                    a(data-toggle="modal", href="#appetizers-modal")
                       img(class="img-responsive centered", src="/img/appetizers-btn.png")
                   .food-button.col-md-4
-                    a(href="#appetizers-modal")
+                    a(data-toggle="modal", href="#burgers-modal")
                       img(class="img-responsive centered", src="/img/burgers-btn.png")
                   .food-button.col-md-4
-                    a(href="#appetizers-modal")
+                    a(data-toggle="modal", href="#calzones-modal")
                       img(class="img-responsive centered", src="/img/calzones-btn.png")
 
                 .row
                   .food-button.col-md-4
-                    a(href="#platters-modal")
+                    a(data-toggle="modal", href="#platters-modal")
                       img(class="img-responsive centered", src="/img/platters-btn.png")
                   .food-button.col-md-4
-                    a(href="#pizza-modal")
+                    a(data-toggle="modal", href="#pizza-modal")
                       img(class="img-responsive centered", src="/img/pizza-btn.png")
                   .food-button.col-md-4
-                    a(href="#pockets-modal")
+                    a(data-toggle="modal", href="#pockets-modal")
                       img(class="img-responsive centered", src="/img/pockets-btn.png")
 
                 .row
                   .food-button.col-md-4
-                    a(href="#soups-salads-modal")
+                    a(data-toggle="modal", href="#soups-salads-modal")
                       img(class="img-responsive centered", src="/img/soups-salads-btn.png")
                   .food-button.col-md-4
-                    a(href="#specialties-modal")
+                    a(data-toggle="modal", href="#specialties-modal")
                       img(class="img-responsive centered", src="/img/specialties-btn.png")
                   .food-button.col-md-4
-                    a(href="#wings-modal")
+                    a(data-toggle="modal", href="#wings-modal")
                       img(class="img-responsive centered", src="/img/wings-btn.png")
 
                 .row
                   .food-button.col-md-4
-                    a(href="#subs-modal")
+                    a(data-toggle="modal", href="#subs-modal")
                       img(class="img-responsive centered", src="/img/subs-btn.png")
                   .food-button.col-md-4
-                    a(href="#desserts-modal")
+                    a(data-toggle="modal", href="#desserts-modal")
                       img(class="img-responsive centered", src="/img/desserts-btn.png")
                   .food-button.col-md-4
-                    a(href="#drinks-modal")
+                    a(data-toggle="modal", href="#drinks-modal")
                       img(class="img-responsive centered", src="/img/drinks-btn.png")
               // /.sl-slide.bg-1
 
@@ -132,7 +132,7 @@ block body
                         p Black Mamba
                         p Triple “X”
                         p U.F.O.
-              // /.sl-slide.bg-2
+        // /.sl-slide.bg-2
 
         .sl-slide.bg-3(data-orientation="horizontal")
           .sl-slide-inner
@@ -144,11 +144,13 @@ block body
                       p (931) 896-2112
                       p 117 Franklin St.
                       p Clarksville, TN 37040
-                  .col-md-6.pull-md-6
-                    img(src="http://placehold.it/300x/300", class="img-responsive centered")
-              // /.sl-slide-bg-3
 
-          // /.sl-slider
+                  .col-md-6.pull-md-6
+                    img(src="http://maps.googleapis.com/maps/api/staticmap?center=117 Franklin Street Clarkvsille,TN&zoom=11&size=400x400&sensor=false",
+                      class="img-responsive centered map")
+        // /.sl-slide-bg-3
+
+      // /.sl-slider
 
       nav#nav-dots.nav-dots
         button.nav-dot-current.btn Food
@@ -158,3 +160,4 @@ block body
 
       // /.sl-slider-wrapper
 
+      include modals.html
