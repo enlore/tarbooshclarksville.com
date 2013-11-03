@@ -61,12 +61,17 @@ body > a img {
     position: absolute;
 }
 
-.panel {
+[class*="food-grid col-"] {
+    padding: 0.8em;
+}
+
+.red-damn-box {
     width: 80%;
     height: 70%;
     border-radius: 4px;
     #gradient > .vertical(@panel-bg-start; @panel-bg-stop;);
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .btn {
