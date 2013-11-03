@@ -1,80 +1,46 @@
-;( function ( $, window, undefined) {
-
-    'use strict'
-
-    var $event = $.event
-        , $special
-        , resizeTimeout
-
-    $special = $event.special.debouncedresize = {
-        setup: function () {
-            $(this).on('resize', $special.handler)
-        },
-        teardown: function () {
-            $(this).off('resize', $special.handler)
-        },
-        handler: function (event, exexAsap) {
-            var context = this
-                , args = arguments
-                , dispatch = function () {
-                    event.type = 'debouncedresize'
-                    $event.dispatch.apply(context, args)
+$(function () {
+    var Page = (function () {
+        var $navArrows = $('#nav-arrows')
+            , $nav = $('#nav-dots > button')
+            , slitslider = $('#slider').slitslider( {
+                onBeforeChange: function (slide, pos) {
+                    $nav.removeClass('nav-dot-current')
+                    $nav.eq(pos).addClass('nav-dot-current')
                 }
+            })
 
-            if (resizeTimeout) {
-                clearTimeout(resizeTimeout)
+            , init = function () {
+                initEvents()
             }
 
-            execAsap ?
-                dispatch() :
-                resizeTimeout = setTimeout (dispatch, $special.threshold)
-        },
-        threshold: 20
-    }
+            , initEvents = function () {
+                 $navArrows.children(':last').on('click', function () {
+                     slitslider.next()
+                     return false
+                 })
 
-    // global
-    var $window = $(window)
-        , $document = $(document)
-        , Modernizr = window.Modernizr
+                 $navArrows.children(':first').on('click', function () {
+                     slitslider.previous()
+                     return false
+                 })
 
-    $.SlitSlider = function (options, element) {
-        this.$elWrapper = $(element)
-        this._init(options)
-    }
+                 $nav.each(function (i) {
+                     $(this).on('click', function () {
+                         var $dot = $(this)
 
-    $.SlitSlider.defaults = {
-        speed: 800,
-        optOpacity: false,
-        translateFactor: 230,
-        maxAngle: 25,
-        maxScale: 2,
-        autoplay: false,
-        keyboard: true,
-        interval: 4000,
-        onBeforeChange: function (slide, idx) { return false },
-        onAfterChange: function (slide, idx) { return false }
-    }
+                         if (!slitslider.isActive() ) {
+                             $nav.removeClass('nav-dot-current')
+                             $dot.addClass('nav-dot-current')
+                         }
 
-    $.SlitSlider.prototype = {
-        _init: fuction () {},
-        _getSize: function () {},
-        _layout: function () {},
-        _navigate: function (dir, pos) {},
-        _validateValues: function (config) {},
-        _onEndNavigate: function ($slice, $oldSlide, dir) {},
-        _setSize: function () {},
-        _loadEvents: function () {},
-        _startSlideshow: function () {},
-        _stopSlideshow: function () {},
-        _destroy: function (callback) {},
+                        slitslider.jump(i + 1)
+                        return false
+                     })
+                 })
+            }
 
-        add: function ($slides, callback) {},
-        next: function () {},
-        previous: function () {},
-        jump: function (pos) {},
-        play: function () {},
-        pause: function () {},
-        isActive: function () {},
-        destroy: function () {}
-    }
-})
+            return { init: init }
+    })()
+
+    Page.init()
+});

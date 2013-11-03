@@ -14,7 +14,8 @@ app.configure('development', function () {
 app.use(less({
     src: path.join(__dirname, 'static'),
     compress: false,
-    debug: true
+    debug: true,
+    paths: [path.join(__dirname, 'static')]
 }))
 
 app.use(express.static(path.join(__dirname, 'static')))

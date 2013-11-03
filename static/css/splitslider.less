@@ -1,0 +1,228 @@
+/* set slider width/height in main.less */
+
+.bg-full {
+    background-image: url('../img/bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.sl-slider-wrapper {
+    width: @slider-width;
+    height: @slider-height;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.sl-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    .bg-full
+}
+
+.sl-slide,
+.sl-slides-wrapper,
+.sl-slide-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.sl-slide {
+    z-index: 1;
+}
+
+.sl-content-slice {
+    overflow: hidden;
+    position: absolute;
+    box-sizing: content-box;
+    background: transparent;
+}
+
+.sl-slide-horizontal {
+    .sl-content-slice {
+        width: 100%;
+        height: 50%;
+        left: -200px;
+    }
+    .sl-content-slice:first-child {
+        top: -200px;
+        padding: 200px 200px 0 200px;
+    }
+    .sl-content-slice:nth-child(2) {
+        top: 50%;
+        padding: 0 200px 200px 200px;
+    }
+}
+
+.sl-slide-vertical {
+    .sl-content-slice {
+        width: 50%;
+        height: 100%;
+        top: -200px;
+    }
+    .sl-content-slice:first-child {
+         left: -200px;
+         padding: 200px 0 200px 200px;
+    }
+    .sl-content-slice:nth-child(2) {
+        left: 50%;
+        padding: 200px 200px 200px 0;
+    }
+}
+
+/* Content wrapper */
+/* Width and height set in js */
+
+.sl-content-wrapper {
+    position: absolute;
+}
+
+.sl-content {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.nav-arrows {
+    span {
+        position: absolute;
+        z-index: 2000;
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        border: 8px solid #ddd;
+        border: 8px solid rgba(150,150,150,0.4);
+        text-indent: -90000px;
+        margin-top: -40px;
+        cursor: pointer;
+        transform: rotate(45deg);
+    }
+
+    span:hover {
+        border: 8px solid rgba(150,150,150,0.9);
+    }
+
+    span.nav-arrow-prev {
+        left: 5%;
+        border-right: none;
+        border-top: none;
+    }
+
+    span.nav-arrow-next {
+        right: 5%;
+        border-left: none;
+        border-bottom: none;
+    }
+}
+
+.nav-dots {
+    text-align: center;
+    position: absolute;
+    bottom: 2%;
+    height: 30px;
+    width: 100%;
+    left: 0;
+    z-index: 10000;
+
+    span {
+        display: inline-block;
+        position: relative;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        margin: 3px;
+        background: #ddd;
+        background: rgba(150, 150, 150, 0.4);
+        cursor: pointer;
+        box-shadow:
+            0 1px 1px rgba(255, 255, 255, 0.4),
+            inset 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    span.nav-dot-current:after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: 3px;
+        left: 3px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.8);
+    }
+}
+
+.bg-1 {
+    .sl-slide-inner,
+    .sl-content-slice {
+    }
+}
+
+.bg-2 {
+    .sl-slide-inner,
+    .sl-content-slice {
+    }
+}
+
+.bg-3 {
+    .sl-slide-inner,
+    .sl-content-slice {
+    }
+}
+
+.sl-trans-elems {
+    .deco {
+        animation: roll 1s ease-out both;
+    }
+
+    h2 {
+        animation: moveUp 1s ease-in-out both;
+    }
+
+    blockquote {
+        animation: fadeIn 0.5s linear 0.5s both;
+    }
+}
+
+@keyframes roll {
+    0%   {transform: translateX(500px) rotate(360deg); opacity: 0;}
+    100% {transform: translateX(0px) rotate(0deg); opacity: 1;}
+}
+
+@keyframes fadeIn {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes moveUp {
+    0%   {transform: translateY(40px);}
+    100% {transform: translateY(0px);}
+}
+
+.sl-trans-back-elems {
+    .deco {
+        animation: scaleDown is ease-in-out both;
+    }
+
+    h2 {
+        animation: fadeOut 1s ease-in-out both;
+    }
+
+    blockquote {
+        animation: fadeOut 1s linear both;
+    }
+}
+
+@keyframes scaleDown {
+    0%   {transform: scale(1);}
+    100% {transform: scale(0.5);}
+}
+
+@keyframes fadeOut {
+    0%   {opacity: 1;}
+    100% {opacity: 0;}
+}
