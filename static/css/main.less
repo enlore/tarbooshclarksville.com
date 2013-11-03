@@ -32,6 +32,13 @@ body > a img {
     z-index: 20001;
 }
 
+.modal {
+    z-index: 200003;
+    .container {
+        width: 100%;
+    }
+}
+
 @media screen and (min-width: 992px) {
     body > a img {
         width: 400px;
@@ -66,17 +73,35 @@ body > a img {
     position: absolute;
 }
 
-[class*="food-grid col-"] {
+.food-grid {
+    padding-top: 3%;
+}
+
+[class*="food-button col-"] {
     padding: 0.8em;
 }
 
+
 .red-damn-box {
-    width: 80%;
     height: 70%;
     border-radius: 4px;
     #gradient > .vertical(@panel-bg-start; @panel-bg-stop;);
     overflow-y: scroll;
     overflow-x: hidden;
+}
+
+.hookah-flavors {
+    color: #fff;
+        p {
+            margin: 2px;
+            font-size: 20px;
+        }
+}
+
+@media screen and (min-width: 992px){
+    .hookah-flavors {
+        padding-top: 20px;
+    }
 }
 
 address {
@@ -86,9 +111,15 @@ address {
     }
 }
 
+.map {
+    border: 3px solid black;
+    border-radius: 3px;
+}
+
 @media screen and (min-width: 992px){
     .contact-info {
-        margin-top: 8%;
+        padding-top: 3%;
+        padding-bottom: 6%;
     }
 }
 
