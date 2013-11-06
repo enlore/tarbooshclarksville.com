@@ -7,6 +7,9 @@
 @rich-lighter-red: #A0181C;
 @shadow-red: #660E0F;
 @dark-rich-red: #420A0D;
+@white: #fff;
+
+@body-copy: @white;
 
 @red-damn-box-bg-start: @rich-red;
 @red-damn-box-bg-stop: @rich-lighter-red;
@@ -126,11 +129,18 @@ body > a img {
     }
 }
 
-address {
-    p {
-        font-size: 24px;
-        color: #fff;
+.contact-info {
+    h3 {
+        color: @body-copy;
+        font-size: 28px;
     }
+    address {
+        p {
+            font-size: 24px;
+            color: @body-copy;
+        }
+    }
+
 }
 
 .map {
