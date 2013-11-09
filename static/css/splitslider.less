@@ -1,12 +1,5 @@
 /* set slider width/height in main.less */
 
-.bg-full {
-    background-image: url('../img/bg.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
 .sl-slider-wrapper {
     width: @slider-width;
     height: @slider-height;
@@ -19,7 +12,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    .bg-full
 }
 
 .sl-slide,
@@ -45,7 +37,7 @@
 
 .sl-slide-horizontal {
     .sl-content-slice {
-        width: 100%;
+        width: 200%;
         height: 50%;
         left: -200px;
     }
@@ -114,57 +106,4 @@
     .sl-slide-inner,
     .sl-content-slice {
     }
-}
-
-.sl-trans-elems {
-    .deco {
-        animation: roll 1s ease-out both;
-    }
-
-    h2 {
-        animation: moveUp 1s ease-in-out both;
-    }
-
-    blockquote {
-        animation: fadeIn 0.5s linear 0.5s both;
-    }
-}
-
-@keyframes roll {
-    0%   {transform: translateX(500px) rotate(360deg); opacity: 0;}
-    100% {transform: translateX(0px) rotate(0deg); opacity: 1;}
-}
-
-@keyframes fadeIn {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-@keyframes moveUp {
-    0%   {transform: translateY(40px);}
-    100% {transform: translateY(0px);}
-}
-
-.sl-trans-back-elems {
-    .deco {
-        animation: scaleDown is ease-in-out both;
-    }
-
-    h2 {
-        animation: fadeOut 1s ease-in-out both;
-    }
-
-    blockquote {
-        animation: fadeOut 1s linear both;
-    }
-}
-
-@keyframes scaleDown {
-    0%   {transform: scale(1);}
-    100% {transform: scale(0.5);}
-}
-
-@keyframes fadeOut {
-    0%   {opacity: 1;}
-    100% {opacity: 0;}
 }
