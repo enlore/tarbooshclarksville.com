@@ -14,16 +14,6 @@ $(function () {
             }
 
             , initEvents = function () {
-                 $navArrows.children(':last').on('click', function () {
-                     slitslider.next()
-                     return false
-                 })
-
-                 $navArrows.children(':first').on('click', function () {
-                     slitslider.previous()
-                     return false
-                 })
-
                  $nav.each(function (i) {
                      $(this).on('click', function () {
                          var $dot = $(this)
