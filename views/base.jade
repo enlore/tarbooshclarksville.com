@@ -7,11 +7,24 @@ html
         meta(name="description",
           content="Mediterranean dining, hookah, and music in Clarksville right here on Franklin Street!")
         link(rel="stylesheet", href="/css/vendor/bootstrap.min.css")
+        //link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css")
         link(rel="stylesheet", href="/css/main.css")
         script(src="/js/vendor/modernizr.custom.79639.js")
 
     body
-        block body
+        .wrapper
+          nav.navbar.navbar-default.navbar-static-top(role="navigation")
+            .navbar-header
+              a.navbar-brand We Deliver!
+            .collapse.navbar-collapse#tarboosh-navbar-collapse
+              ul.nav.navbar-nav
+                li
+                  a(href="/") Home
+                li
+                  a(href="/menus") Menus
+                li
+                  a(href="/contact") Contact
+          block body
 
         script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
         script(src="/js/vendor/bootstrap.min.js")
