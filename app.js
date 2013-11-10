@@ -11,7 +11,7 @@ app.set('views', __dirname + '/views')
 // development
 app.configure('development', function () {
     app.locals.pretty = true
-    ip = 'localhost'
+    ip = '192.168.1.141'
 })
 
 // production
