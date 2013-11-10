@@ -15,9 +15,16 @@ html
         .wrapper
           nav.navbar.navbar-default.navbar-static-top(role="navigation")
             .navbar-header
-              a.navbar-brand We Deliver!
+              button.navbar-toggle(type="button", data-toggle="collapse",
+                data-target="#tarboosh-navbar-collapse")
+                span.sr-only Toggle Nav
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              a.navbar-brand 
+                h3 We Deliver!
             .collapse.navbar-collapse#tarboosh-navbar-collapse
-              ul.nav.navbar-nav
+              ul.nav.nav-justified
                 li
                   a(href="/") Home
                 li
