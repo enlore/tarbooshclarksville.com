@@ -19,6 +19,8 @@
 @close-button-border: @dark-rich-red;
 @close-button-shadow: @rich-lighter-red;
 
+@nav-anchor-focus: @rich-red;
+
 @font-face {
     font-family: 'GillSans';
     src: url('/font/GillSans.ttf');
@@ -116,7 +118,7 @@ body {
 }
 
 .contact-info {
-    background: rgba(238, 238, 238, 0.7);
+    background: rgba(238, 238, 238, 0.9);
     h3 {
         color: @body-copy;
         font-size: 28px;
@@ -125,12 +127,7 @@ body {
     address {
         margin-top: 1em;
         margin-bottom: 1em;
-        p {
-            font-size: 24px;
-            color: @body-copy;
-            padding: 0;
-            margin: 0;
-        }
+        font-size: 24px;
     }
 
     .map {
@@ -154,6 +151,12 @@ nav .btn {
     border-radius: 2px;
     .button-variant(#eee; #DF4231; #D61100;);
     padding: 0 2px 0 2px;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+    background: @nav-anchor-focus;
+    #gradient > .vertical(@red-damn-box-bg-start; @red-damn-box-bg-stop;);
 }
 
 .navbar.navbar-default {
@@ -180,5 +183,25 @@ nav .btn {
 @media screen and (min-width: 992px) {
     .jumbotron {
         text-align: left;
+    }
+}
+
+.pdf-link {
+    display: none;
+}
+
+@media screen and (min-width: 992px) {
+    .pdf-link.btn {
+        display: block;
+        float: right;
+        overflow: hidden;
+        border: 1px solid grey;
+        padding: 1em;
+        position: absolute;
+        bottom: 3%;
+        right: 100px;
+        #gradient > .vertical(@red-damn-box-bg-start; @red-damn-box-bg-stop;);
+        border: 1px solid #D61100;
+        color: #fff;
     }
 }
