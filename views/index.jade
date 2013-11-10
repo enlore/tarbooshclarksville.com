@@ -2,9 +2,24 @@ extends base
 block body
     .jumbotron
       .container
-        .jumbotron-header
-          h1 Welcome to Tarboosh
-        .jumbotron-body
-          .page-header
-            h2 Mediterranean Food and Hookah on Franklin!
-            p We deliver, so give us a call at (931) 000 0000
+        .row
+          .col-md-8
+            .jumbotron-header
+              h1 Welcome to Tarboosh
+            .jumbotron-body
+              .page-header
+                h2 Mediterranean Food and Hookah on Franklin!
+                p We deliver, so give us a call at (931) 896 2112
+                p Hours:
+                .table-responsive
+                  table.table
+                    tr
+                      td Sun - Wed
+                      td 11am - 3pm and 6pm - 2am
+                    tr
+                      td Fri - Sat
+                      td 11am - 3pm and 6pm - 5am
+
+
+          .col-md-4
+            img.logo.img-responsive.centered(src="/img/fancy-logo.jpg")
