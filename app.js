@@ -36,5 +36,9 @@ app.get('/menus', function(req, res) {
     res.render('menus')
 })
 
+app.get('/contact', function (req, res) {
+    res.render('contact')
+})
+
 app.listen(port, ip)
 console.log('* listening on ' + port)
