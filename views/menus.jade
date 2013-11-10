@@ -1,0 +1,161 @@
+extends base
+block body
+    #slider.sl-slider-wrapper
+      a(href="/")
+        img(class="img-responsive centered logo",
+          src="/img/fancy-logo.jpg",
+          alt="Tarboosh Clarksville Logo")
+      .sl-slider
+
+        .sl-slide.bg-1(data-orientation="horizontal")
+          .sl-slide-inner
+            .red-damn-box.abs-centered
+              .container.food-grid
+                .row
+                  .food-button.col-md-4
+                    a(data-toggle="modal", href="#appetizers-modal")
+                      img(class="img-responsive centered", src="/img/appetizers-btn.png")
+                  .food-button.col-md-4
+                    a(data-toggle="modal", href="#burgers-modal")
+                      img(class="img-responsive centered", src="/img/burgers-btn.png")
+                  .food-button.col-md-4
+                    a(data-toggle="modal", href="#calzones-modal")
+                      img(class="img-responsive centered", src="/img/calzones-btn.png")
+
+                .row
+                  .food-button.col-md-4
+                    a(data-toggle="modal", href="#platters-modal")
+                      img(class="img-responsive centered", src="/img/platters-btn.png")
+                  .food-button.col-md-4
+                    a(data-toggle="modal", href="#pizza-modal")
+                      img(class="img-responsive centered", src="/img/pizza-btn.png")
+                  .food-button.col-md-4
+                    a(data-toggle="modal", href="#pockets-modal")
+                      img(class="img-responsive centered", src="/img/pockets-btn.png")
+
+                .row
+                  .food-button.col-md-4
+                    a(data-toggle="modal", href="#soups-salads-modal")
+                      img(class="img-responsive centered", src="/img/soups-salads-btn.png")
+                  .food-button.col-md-4
+                    a(data-toggle="modal", href="#specialties-modal")
+                      img(class="img-responsive centered", src="/img/specialties-btn.png")
+                  .food-button.col-md-4
+                    a(data-toggle="modal", href="#wings-modal")
+                      img(class="img-responsive centered", src="/img/wings-btn.png")
+
+                .row
+                  .food-button.col-md-4
+                    a(data-toggle="modal", href="#subs-modal")
+                      img(class="img-responsive centered", src="/img/subs-btn.png")
+                  .food-button.col-md-4
+                    a(data-toggle="modal", href="#desserts-modal")
+                      img(class="img-responsive centered", src="/img/desserts-btn.png")
+                  .food-button.col-md-4
+                    a(data-toggle="modal", href="#drinks-modal")
+                      img(class="img-responsive centered", src="/img/drinks-btn.png")
+              // /.sl-slide.bg-1
+
+        .sl-slide.bg-2(data-orientation="horizontal")
+          .sl-slide-inner
+            .red-damn-box.abs-centered
+              .container.hookah-flavors.aligned-center
+                .row
+                  .col-md-6
+                    .row
+                      .col-md-12
+                        h2 Regular Flavors - $9.99
+
+                    .row
+                      .col-md-6
+                        p Apple
+                        p Banana
+                        p Cherry
+                        p Grenadine
+                        p Grape
+                        p Jasmine
+                        p Lemon
+                        p Mint
+                        p Mango
+                        p Orange
+                        p Mixed Fruit
+                        p Watermelon
+                        p Peach Rose
+                        p Strawberry
+                        p Vanilla
+
+                      .col-md-6
+                        p Coconut
+                        p Plum
+                        p Monster
+                        p Cola
+                        p Pineapple
+                        p Gum
+                        p Kiwi
+                        p Cappuccino
+                        p Café Latté
+                        p Berry
+                        p Licorice
+                        p Chocolate
+                        p Cinnamon
+                        p Melon
+
+                  .col-md-6
+                    .row
+                      .col-md-12
+                        h2 Starbuzz - $13.99
+
+                    .row
+                      .col-md-6
+                        p Exotic Pink
+                        p Code 69
+                        p Pink Lady
+                        p Blue Mist
+                        p Sex on the Beach
+                        p WinterFresh
+                        p Queen of Sex
+                        p Lebanese Bombshell
+                        p Margarita
+                        p Flower Power
+
+                      .col-md-6
+                        p Passion Kiss
+                        p Pirate’s Cave
+                        p Pumpkin Pie
+                        p Chocolate-Strawberry
+                        p Melon Dew
+                        p Nice Dreams
+                        p Pomegranate
+                        p Raspberry Kamikaze
+                        p Black Mamba
+                        p Triple “X”
+                        p U.F.O.
+        // /.sl-slide.bg-2
+
+        .sl-slide.bg-3(data-orientation="horizontal")
+          .sl-slide-inner
+            .red-damn-box.abs-centered
+              .container.contact-info.abs-centered
+                .row
+                  .col-md-6.push-md-6
+                    h3.aligned-center Call Us, We Deliver!
+                    address.aligned-center
+                      p (931) 896-2112
+                      p 117 Franklin St.
+                      p Clarksville, TN 37040
+
+                  .col-md-6.pull-md-6
+                    img(src="/img/clarksville-map.png",
+                      class="img-responsive centered map")
+        // /.sl-slide-bg-3
+
+      // /.sl-slider
+
+      nav#nav-dots.nav-dots
+        button.nav-dot-current.btn Food
+        button.btn Hookah
+        button.btn Contact
+      // /.nav-dots
+      // /.sl-slider-wrapper
+      include modals.html
+
