@@ -1,7 +1,7 @@
 @import 'mixins.less';
 @import 'splitslider.less';
 @slider-width: 100%;
-@slider-height: 100%;
+@slider-height: 91%;
 
 @rich-red: #84151A;
 @rich-lighter-red: #A0181C;
@@ -24,6 +24,7 @@
     src: url('/font/GillSans.ttf');
 }
 
+html,
 body,
 h1,h2,h3,h4,h5,h6{
     margin: 0;
@@ -33,16 +34,6 @@ h1,h2,h3,h4,h5,h6{
 body {
     width: 100%;
     font-family: 'GillSans', sans-serif;
-}
-
-body > a {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: auto;
-    z-index: 20000;
 }
 
 .logo {
@@ -67,20 +58,9 @@ body > a {
     }
 }
 
-.modal-header {
-}
-
-.centered {
-    margin: 0 auto;
-}
-
-.aligned-center {
-    text-align: center;
-}
-
-.aligned-right {
-    text-align: right;
-}
+.centered { margin: 0 auto; }
+.aligned-center { text-align: center; }
+.aligned-right { text-align: right; }
 
 .abs-centered {
     margin: auto;
@@ -105,8 +85,6 @@ body > a {
     .bg-full
 }
 
-
-
 .food-grid {
     padding-top: 3%;
 }
@@ -116,7 +94,7 @@ body > a {
 }
 
 .red-damn-box {
-    height: 70%;
+    height: 80%;
     border-radius: 4px;
     #gradient > .vertical(@red-damn-box-bg-start; @red-damn-box-bg-stop;);
     overflow-y: scroll;
@@ -141,6 +119,7 @@ body > a {
 }
 
 .contact-info {
+    background: rgba(238, 238, 238, 0.7);
     h3 {
         color: @body-copy;
         font-size: 28px;
