@@ -1,7 +1,7 @@
 @import 'mixins.less';
 @import 'splitslider.less';
 @slider-width: 100%;
-@slider-height: 91%;
+@slider-height: 100%;
 
 @rich-red: #84151A;
 @rich-lighter-red: #A0181C;
@@ -44,6 +44,26 @@ body {
     font-family: 'GillSans', sans-serif !important;
 }
 
+@media screen and (min-width: 360px) {
+    html, body {
+    }
+}
+
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -42px;
+    .bg-full
+}
+
+.wrapper:after {
+    content: "";
+    display: block;
+}
+
+.footer, .push {
+    height: 42px;
+}
+
 .centered { margin: 0 auto; }
 .aligned-center { text-align: center; }
 .aligned-right { text-align: right; }
@@ -61,13 +81,8 @@ body {
     background-image: url('../img/bg.jpg');
     background-position: center center;
     background-size: cover;
-    -webkit-background-size: cover cover;
+    -webkit-background-size: cover;
     background-attachment: fixed;
-}
-
-.wrapper {
-    height: 100%;
-    .bg-full
 }
 
 /* Contact Page
@@ -138,6 +153,40 @@ body {
 
 /* Menu Page
  ******************/
+.sl-slider-wrapper {
+    width: @slider-width;
+    height: @slider-height;
+    padding-top: 100px;
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+}
+
+@media screen and (min-width: 768px) {
+    .sl-slider-wrapper {
+        min-height: 400px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .sl-slider-wrapper {
+        min-height: 600px;
+    }
+}
+
+.red-damn-box,
+.sl-slider-wrapper {
+    border: 1px solid blue;
+}
+
+.nav-dots {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 1%;
+    z-index: 10000;
+}
+
 .food-grid {
     padding-top: 3%;
 }
@@ -170,6 +219,7 @@ body {
         padding-top: 20px;
     }
 }
+
 nav .btn {
     font-size: 20px;
     color: #eee;
@@ -199,7 +249,7 @@ nav .btn {
         border: 1px solid grey;
         padding: 1em;
         position: absolute;
-        bottom: 3%;
+        bottom: 0;
         right: 100px;
         #gradient > .vertical(@red-damn-box-bg-start; @red-damn-box-bg-stop;);
         border: 1px solid #D61100;
