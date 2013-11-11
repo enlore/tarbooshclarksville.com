@@ -122,6 +122,8 @@ body {
     }
 }
 
+/* Contact Page
+ ****************/
 .contact-info {
     background: rgba(238, 238, 238, 0.9);
     h3 {
@@ -162,16 +164,8 @@ body {
     }
 }
 
-nav .btn {
-    font-size: 20px;
-    color: #eee;
-    margin: 0 5px 0 5px;
-    border: 1px solid #D61100;
-    border-radius: 2px;
-    .button-variant(#eee; #DF4231; #D61100;);
-    padding: 0 2px 0 2px;
-}
-
+/* Top navbar
+ ******************/
 .nav > li > a:hover,
 .nav > li > a:focus {
     background: @nav-anchor-focus;
@@ -186,6 +180,24 @@ nav .btn {
     li a {
         color: #fff;
     }
+}
+
+@media screen and (min-width: 992px) {
+    .nav > li > a {
+        font-size: 22px;
+    }
+}
+
+/* Menu Buttons
+ ******************/
+nav .btn {
+    font-size: 20px;
+    color: #eee;
+    margin: 0 5px 0 5px;
+    border: 1px solid #D61100;
+    border-radius: 2px;
+    .button-variant(#eee; #DF4231; #D61100;);
+    padding: 0 2px 0 2px;
 }
 
 @media screen and (min-width: 992px) {
