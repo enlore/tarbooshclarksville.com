@@ -33,6 +33,11 @@ h1,h2,h3,h4,h5,h6{
     padding: 0;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     width: 100%;
     font-family: 'GillSans', sans-serif;
@@ -128,18 +133,32 @@ body {
         margin-top: 1em;
         margin-bottom: 1em;
         font-size: 24px;
+        .fb-icon {
+            margin-top: 1em;
+            width: 100px;
+        }
     }
 
     .map {
         border: 3px solid black;
         border-radius: 3px;
+        min-height: 18em;
     }
+    padding: 1em;
+
 }
 
 @media screen and (min-width: 992px){
     .contact-info {
-        padding-top: 5%;
-        padding-bottom: 2em;
+        padding: 2em;
+        address {
+            .fb-icon {
+                width: auto;
+            }
+        }
+        .map {
+            min-height: 25em;
+        }
     }
 }
 
