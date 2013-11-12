@@ -57,3 +57,17 @@ function initialize() {
     var marker = new google.maps.Marker(marker_options)
 }
 google.maps.event.addDomListener(window, 'load', initialize)
+
+$(document).ready(function () {
+    console.log(window.location.pathname)
+    var pathname = window.location.pathname
+    if (pathname === '/') {
+        $('#index').addClass('active')
+    }
+    else if (pathname === '/menus'){
+        $('#menus').addClass('active')
+    }
+    else if (pathname === '/contact') {
+        $('#contact').addClass('active')
+    }
+})

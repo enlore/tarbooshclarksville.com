@@ -33,15 +33,12 @@ body,
 h1,h2,h3,h4,h5,h6{
     margin: 0;
     padding: 0;
+    font-family: 'GillSans', sans-serif !important;
 }
 
 html,
 body {
     height: 100%;
-}
-
-body {
-    font-family: 'GillSans', sans-serif !important;
 }
 
 @media screen and (min-width: 360px) {
@@ -132,7 +129,20 @@ body {
 .nav > li > a:hover,
 .nav > li > a:focus {
     background: @nav-anchor-focus;
+    border-bottom: 3px solid #118A8E;
     #gradient > .radial(@red-box-bg-stop; @red-box-bg-start;);
+}
+
+.navbar.navbar-default .navbar-header a.navbar-brand {
+    background: #118A8E;
+    &:hover {
+        background: #118A8E;
+    }
+    padding-bottom: 13px;
+}
+
+.nav > li > a.active {
+    border-bottom: 3px solid #118A8E;
 }
 
 .navbar.navbar-default {
@@ -145,6 +155,9 @@ body {
     }
 }
 
+.nav > li > a {
+    font-size: 22px;
+}
 @media screen and (min-width: 992px) {
     .nav > li > a {
         font-size: 22px;
@@ -266,6 +279,8 @@ nav .btn {
     text-align: center;
     padding-top: 1em;
     padding-bottom: 1em;
+    box-shadow: inset 0 3px 1px -1px grey,
+        inset 0 -3px 1px -1px grey;
     .page-header {
         margin-bottom: 0;
     }
