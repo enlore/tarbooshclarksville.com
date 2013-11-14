@@ -31,6 +31,16 @@
     src: url('/font/GillSans.ttf');
 }
 
+@viewport {
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+
+@-ms-viewport {
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+
 /* Resets and utility classes
  ********************************/
 html,
@@ -179,10 +189,11 @@ body {
 .sl-slider-wrapper {
     width: @slider-width;
     height: @slider-height;
-    padding-top: 100px;
+    padding-top: 90px;
     position: relative;
     overflow: hidden;
     min-height: 340px;
+    top: -14px;
 }
 
 @media screen and (min-width: 768px) {
@@ -201,7 +212,7 @@ body {
     text-align: center;
     position: absolute;
     width: 100%;
-    bottom: 1%;
+    bottom: 0%;
     z-index: 10000;
 }
 
