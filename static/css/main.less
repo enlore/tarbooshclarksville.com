@@ -8,8 +8,14 @@
 @shadow-red: #660E0F;
 @dark-rich-red: #420A0D;
 @white: #fff;
+@turquoise: #118A8E;
 
 @body-copy: @white;
+
+@nav-brand-bg: @turquoise;
+@nav-active: @turquoise;
+@nav-anchor-hover: @rich-red;
+@footer: @turquoise;
 
 @red-box-bg-start: @rich-red;
 @red-box-bg-stop: @rich-lighter-red;
@@ -19,7 +25,6 @@
 @close-button-border: @dark-rich-red;
 @close-button-shadow: @rich-lighter-red;
 
-@nav-anchor-focus: @rich-red;
 
 @font-face {
     font-family: 'GillSans';
@@ -57,8 +62,12 @@ body {
     display: block;
 }
 
+.footer {
+    background: 
+}
+
 .footer, .push {
-    height: 42px;
+    height: 22px;
 }
 
 .centered { margin: 0 auto; }
@@ -128,21 +137,21 @@ body {
  ******************/
 .nav > li > a:hover,
 .nav > li > a:focus {
-    background: @nav-anchor-focus;
-    border-bottom: 3px solid #118A8E;
+    background: @nav-anchor-hover;
+    border-bottom: 3px solid @nav-active;
     #gradient > .radial(@red-box-bg-stop; @red-box-bg-start;);
 }
 
 .navbar.navbar-default .navbar-header a.navbar-brand {
-    background: #118A8E;
+    background: @nav-brand-bg;
     &:hover {
-        background: #118A8E;
+        background: @nav-brand-bg;
     }
     padding-bottom: 13px;
 }
 
 .nav > li > a.active {
-    border-bottom: 3px solid #118A8E;
+    border-bottom: 3px solid @nav-active;
 }
 
 .navbar.navbar-default {
